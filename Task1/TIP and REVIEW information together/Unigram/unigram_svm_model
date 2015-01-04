@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-7" -seed 1
+Relation:     task1_aggregated_bustipreview_withcategories-weka.filters.unsupervised.attribute.NominalToString-C2-3-weka.filters.unsupervised.attribute.RenameAttribute-findcity-replacebusiness_city-Rfirst-last-weka.filters.unsupervised.attribute.StringToWordVector-R2,3-W2500-prune-rate-1.0-C-T-I-N1-L-S-stemmerweka.core.stemmers.SnowballStemmer-M1-tokenizerweka.core.tokenizers.NGramTokenizer -max 1 -min 1 -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.Reorder-R2-last,1-weka.filters.unsupervised.attribute.Reorder-R2-last,1-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainAttributeEval-Sweka.attributeSelection.Ranker -T 0.0 -N -1-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainAttributeEval-Sweka.attributeSelection.Ranker -T 0.0 -N -1
+Instances:    1743
+Attributes:   1912
+              [list of attributes omitted]
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 32.32 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1618               92.8285 %
+Incorrectly Classified Instances       125                7.1715 %
+Kappa statistic                          0.9115
+Mean absolute error                      0.009 
+Root mean squared error                  0.0947
+Relative absolute error                  8.7082 %
+Root relative squared error             41.7655 %
+Coverage of cases (0.95 level)          92.8285 %
+Mean rel. region size (0.95 level)       6.25   %
+Total Number of Instances             1743     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.053    0.910      0.998    0.952      0.927    0.973     0.909     Food
+                 0.888    0.006    0.912      0.888    0.900      0.893    0.941     0.817     Doctors
+                 0.972    0.021    0.884      0.972    0.926      0.915    0.975     0.864     Active Life
+                 0.868    0.009    0.882      0.868    0.875      0.865    0.929     0.775     Health and Medical
+                 0.983    0.002    0.983      0.983    0.983      0.981    0.990     0.968     Auto Repair
+                 0.849    0.000    1.000      0.849    0.919      0.919    0.925     0.856     Home Services
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.007     Wine Bars
+                 0.981    0.000    1.000      0.981    0.990      0.989    0.990     0.982     Beauty and Spas
+                 0.875    0.001    0.961      0.875    0.916      0.914    0.937     0.845     Fashion
+                 0.059    0.000    1.000      0.059    0.111      0.241    0.529     0.068     Electronics
+                 0.777    0.002    0.967      0.777    0.861      0.859    0.887     0.765     Arts and Entertainment
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.003     Financial Services
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Libraries
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Adult Entertainment
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.001     Gardeners
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.002     Gift Shops
+Weighted Avg.    0.928    0.023    0.920      0.928    0.918      0.907    0.953     0.867     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   k   l   m   n   o   p   <-- classified as
+ 607   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0 |   a = Food
+   1 103   1  11   0   0   0   0   0   0   0   0   0   0   0   0 |   b = Doctors
+   5   0 245   0   0   0   0   0   0   0   2   0   0   0   0   0 |   c = Active Life
+   4  10   2 112   0   0   0   0   1   0   0   0   0   0   0   0 |   d = Health and Medical
+   3   0   0   0 172   0   0   0   0   0   0   0   0   0   0   0 |   e = Auto Repair
+   5   0   5   0   1  62   0   0   0   0   0   0   0   0   0   0 |   f = Home Services
+  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 |   g = Wine Bars
+   1   0   1   1   0   0   0 153   0   0   0   0   0   0   0   0 |   h = Beauty and Spas
+   3   0   3   1   0   0   0   0  49   0   0   0   0   0   0   0 |   i = Fashion
+  14   0   0   0   2   0   0   0   0   1   0   0   0   0   0   0 |   j = Electronics
+   9   0  16   0   0   0   0   0   0   0  87   0   0   0   0   0 |   k = Arts and Entertainment
+   1   0   3   2   0   0   0   0   0   0   0   0   0   0   0   0 |   l = Financial Services
+   0   0   0   0   0   0   0   0   0   0   0   0  13   0   0   0 |   m = Libraries
+   0   0   0   0   0   0   0   0   0   0   0   0   0  14   0   0 |   n = Adult Entertainment
+   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0 |   o = Gardeners
+   2   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0 |   p = Gift Shops
+

@@ -1,0 +1,68 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-7" -seed 1
+Relation:     businessandtip_task1_with15categories-weka.filters.unsupervised.attribute.NominalToString-C1-2-weka.filters.unsupervised.attribute.StringToWordVector-R1,2-W1000-prune-rate-1.0-C-T-I-N1-L-S-stemmerweka.core.stemmers.NullStemmer-M1-tokenizerweka.core.tokenizers.NGramTokenizer -max 2 -min 2 -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.Reorder-R2-last,1
+Instances:    7217
+Attributes:   20318
+              [list of attributes omitted]
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 256.1 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3571               49.4804 %
+Incorrectly Classified Instances      3646               50.5196 %
+Kappa statistic                          0     
+Mean absolute error                      0.0674
+Root mean squared error                  0.2595
+Relative absolute error                 71.8352 %
+Root relative squared error            119.9134 %
+Coverage of cases (0.95 level)          49.4804 %
+Mean rel. region size (0.95 level)       6.6667 %
+Total Number of Instances             7217     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.047     Doctors
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.174     Active Life
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.084     Beauty and Spas
+                 1.000    1.000    0.495      1.000    0.662      0.000    0.500     0.495     Food
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.008     Adult Entertainment
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.094     Arts and Entertainment
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.060     Auto Repair
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.008     Professional Services
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.008     Tattoo
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.007     Electronics
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.003     Grocery
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.010     Wine Bars
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.001     Real Estate
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.000     Adult Education
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.000     Tours
+Weighted Avg.    0.495    0.495    0.245      0.495    0.328      0.000    0.500     0.297     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j    k    l    m    n    o   <-- classified as
+    0    0    0  340    0    0    0    0    0    0    0    0    0    0    0 |    a = Doctors
+    0    0    0 1258    0    0    0    0    0    0    0    0    0    0    0 |    b = Active Life
+    0    0    0  609    0    0    0    0    0    0    0    0    0    0    0 |    c = Beauty and Spas
+    0    0    0 3571    0    0    0    0    0    0    0    0    0    0    0 |    d = Food
+    0    0    0   55    0    0    0    0    0    0    0    0    0    0    0 |    e = Adult Entertainment
+    0    0    0  679    0    0    0    0    0    0    0    0    0    0    0 |    f = Arts and Entertainment
+    0    0    0  431    0    0    0    0    0    0    0    0    0    0    0 |    g = Auto Repair
+    0    0    0   58    0    0    0    0    0    0    0    0    0    0    0 |    h = Professional Services
+    0    0    0   60    0    0    0    0    0    0    0    0    0    0    0 |    i = Tattoo
+    0    0    0   49    0    0    0    0    0    0    0    0    0    0    0 |    j = Electronics
+    0    0    0   23    0    0    0    0    0    0    0    0    0    0    0 |    k = Grocery
+    0    0    0   74    0    0    0    0    0    0    0    0    0    0    0 |    l = Wine Bars
+    0    0    0    6    0    0    0    0    0    0    0    0    0    0    0 |    m = Real Estate
+    0    0    0    2    0    0    0    0    0    0    0    0    0    0    0 |    n = Adult Education
+    0    0    0    2    0    0    0    0    0    0    0    0    0    0    0 |    o = Tours
+
